@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <div class="form-group">
+        <label for="FormControlInput1">TOTAL MONEY</label><br>
+        <input type="number" class="form-control" id="FormControlInput1" placeholder="(vnd)">
+    </div>
+    <div class="form-group">
+        <label for="FormControlSelect1">TYPE</label>
+        <select class="form-control" id="FormControlSelect1">
+            <option onclick="pay()">Pay</option>
+            <option onclick="collect()">Collect</option>
+        </select>
+    </div>
+    <div class="form-group" style="display: none">
+        <label for="FormControlSelect2">LIST</label><br>
+        <select multiple class="form-control" id="FormControlSelect2">
+            <option>Shopping</option>
+            <option>Travel</option>
+            <option>Tuition1</option>
+            <option>Tuition2</option>
+            <option>Other...</option>
+        </select>
+    </div>
+    <div class="form-group" style="display: none">
+        <label for="FormControlSelect3">LIST</label><br>
+        <select multiple class="form-control" id="FormControlSelect3">
+            <option>Salary1</option>
+            <option>Salary2</option>
+            <option>Salary3</option>
+            <option>Salary4</option>
+            <option>Other...</option>
+        </select>
+    </div>
+    <div class="form-group" style="display: none">
+        </textarea><label for="FormControlTextarea3">Example textarea</label>
+        <textarea class="form-control" id="FormControlTextarea3" rows="1"></textarea>
+    </div>
+</form>
+<script src="index.js"></script>
+</body>
+</html>
