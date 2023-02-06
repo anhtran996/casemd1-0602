@@ -1,4 +1,5 @@
 let div = document.querySelectorAll(".form-group .form-control");
+
 function changeType(e) {
 
     if (e.target.value === "-") {
@@ -15,19 +16,34 @@ function changeType(e) {
     }
 }
 
-let sum  = 0 ;
+function myFunction() {
+    let e = document.getElementById('FormControlSelect1')
+    let current = +document.getElementById('FormControlInput6').value;
+    let amount = +document.getElementById('FormControlInput1').value;
 
-function myFunction(){
 
-let amount = +document.getElementById('FormControlInput1').value
-    sum = amount
-    document.getElementById("FormControlInput6").value = sum
-    let money = +document.getElementById('FormControlInput4').value;
-}
-function myFunction1(sum, money){
-    if(document.getElementById('FormControlSelect1').value == "-") {
-        sum -= money
-    } else if(document.getElementById('FormControlSelect1').value == "+"){
-        sum += money
+    if (e.options[e.selectedIndex].text === 'Pay') {
+        if (current < amount) {
+            alert('Not enough money');
+        } else {
+            current -= amount;
+            document.getElementById('FormControlInput6').value = current
+        }
+    } else if (e.options[e.selectedIndex].text === 'Collect') {
+        current += amount;
+        document.getElementById('FormControlInput6').value = current
+    } else {
+        document.getElementById('FormControlInput6').value = amount;
     }
+    let d = new Date();
+
+    document.getElementById("FormControlInput7").innerHTML = `Date: ${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`
 }
+
+
+
+
+
+
+
+
